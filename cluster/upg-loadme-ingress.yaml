@@ -10,6 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/tags: CreatedBy=testUser
     # alb.ingress.kubernetes.io/subnets: subnet-02e4e73dc18848b65, subnet-0a3ce1e9dce88d2bc # mention public subnets only if subnets not tagged for autodiscovery
     alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
 spec:
   rules:
   - host: k8s.local
@@ -21,4 +22,4 @@ spec:
             service:
               name: upg-loadme
               port:
-                number: 80
+                number: 8081

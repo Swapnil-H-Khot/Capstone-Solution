@@ -30,6 +30,8 @@ spec:
               cpu: 1000m
               memory: 400Mi
           imagePullPolicy: Always
+          ports:
+          - containerPort: 8081
       restartPolicy: Always
       tolerations:
       - key: "critical"
@@ -49,7 +51,7 @@ metadata:
 spec:
   selector:
     app: upg-loadme
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - name: app-port
     protocol: TCP

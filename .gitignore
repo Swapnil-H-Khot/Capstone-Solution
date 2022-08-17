@@ -19,4 +19,4 @@ kubectl
 cluster/iam_policy_us-gov.json
 .wget-hsts
 *v2_2_1_full.yaml
-*.config
+*.config/helm
